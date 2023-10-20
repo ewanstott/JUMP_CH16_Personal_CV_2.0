@@ -1,0 +1,35 @@
+/* General CSS */
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  /* width: 100%; */
+  padding: 0 50px;
+  /* align-items: center;
+  justify-content: center; */
+}
+/* Media Queries  */
+
+/* 1. CSS for small screens */
+@media only screen and (max-width: 600px) {
+  #hero {
+    background-image: url(Images/Ewan-white-background-mobile.png);
+  }
+}
+
+/* .hero h1 {
+  margin-top: 100%;
+  font-size: 16px;
+} */
+
+/* 2. Applies from 600px upwards */
+@media (min-width: 600px) {
+}
+
+/* 3. Applies from 1200px upwards */
+@media (min-width: 1200px) {
+}
