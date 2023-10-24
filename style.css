@@ -6,18 +6,195 @@
   text-decoration: none;
 }
 
-.container {
-  /* width: 100%; */
-  padding: 0 50px;
-  /* align-items: center;
-  justify-content: center; */
+body {
+  font-size: 18px;
 }
+
+.container {
+}
+
+h3 {
+}
+
+/* End General CSS */
+
+/* Header  */
+#header span {
+  color: crimson;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: crimson;
+  padding: 1px;
+  padding-right: 40px;
+  border-radius: 3px;
+}
+
+.sticky-header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style-type: none;
+  /* width: 100%; */
+}
+
+.nav-menu a[href="#contact"] {
+  border: 1.5px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+}
+
+/* End Header */
+
+.card {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero  */
+#hero {
+  padding-top: 10px;
+  min-height: 80vh;
+  background-image: url(Images/Ewan-white-background-mobile.png);
+  background-size: cover;
+  background-position: top center;
+  z-index: 1;
+}
+
+/* #hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+} */
+
+#hero h2 {
+  font-size: 2.5rem;
+}
+#hero h2 span {
+  font-size: 2.5rem;
+  color: crimson;
+}
+
+/* End Hero */
+
+/* About  */
+
+.tab-contents ul li span {
+  color: crimson;
+}
+
+/* About End */
+
+/* Contact  */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  /* margin: 0 auto; */
+  /* padding: 20px; */
+  /* background-color: #f0f0f0; */
+}
+
+.child-element {
+  /* flex-basis: calc(50% - 10px); */
+  flex-basis: 100%;
+  text-align: justify;
+}
+
+.child-element.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.child-element.contact-form form input,
+.child-element.contact-form form textarea {
+  margin: 5px 0; /* Add some vertical spacing between form elements */
+  width: 100%;
+}
+
+/* Contact End */
+
+/* Footer */
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+/* Footer End */
+
 /* Media Queries  */
 
-/* 1. CSS for small screens */
-@media only screen and (max-width: 600px) {
+/* 1. Mobile - CSS for small screens */
+/* @media only screen and (max-width: 600px) {
   #hero {
     background-image: url(Images/Ewan-white-background-mobile.png);
+  }
+} */
+
+/* Mobile End */
+
+/* 2. Tablet - Applies from 600px upwards */
+@media (min-width: 600px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .sticky-header {
+    padding: 1px;
+    padding-right: 40px;
+    border-radius: 3px;
+  }
+  .sticky-header nav ul {
+    display: flex;
+    justify-content: left;
+  }
+
+  .sticky-header nav ul li {
+    margin-right: 20px; /* Adjust the margin as needed for spacing */
+  }
+
+  #hero {
+    background-image: url(Images/Ewan-white-background.png);
+  }
+  .portfolio-container,
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    width: calc(50% - 20px);
+    margin: 10px;
   }
 }
 
@@ -26,10 +203,40 @@
   font-size: 16px;
 } */
 
-/* 2. Applies from 600px upwards */
-@media (min-width: 600px) {
+/* Tablet End */
+
+/* 3. Desktop - Applies from 1200px upwards */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .sticky-header {
+    padding: 1px;
+    padding-right: 40px;
+    border-radius: 3px;
+  }
+  .sticky-header nav ul {
+    display: flex;
+    justify-content: left;
+  }
+
+  .sticky-header nav ul li {
+    margin-right: 20px; /* Adjust the margin as needed for spacing */
+  }
+
+  #hero {
+    background-image: url(Images/Ewan-white-background.png);
+  }
+  .portfolio-container,
+  .services-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+  }
 }
 
-/* 3. Applies from 1200px upwards */
-@media (min-width: 1200px) {
-}
+/* Desktop End */
